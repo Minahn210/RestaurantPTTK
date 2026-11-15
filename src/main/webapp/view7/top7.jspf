@@ -1,0 +1,29 @@
+<%@ page pageEncoding="UTF-8"%><%@ include file="/view7/common7.jspf" %><%
+    String ctx = request.getContextPath();
+    Staff7 me7 = (Staff7) session.getAttribute("staff");
+%><!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= h7(title7) %> | Nhà hàng ABC</title>
+<link rel="stylesheet" href="<%= ctx %>/css/style7.css">
+</head>
+<body>
+<header class="top7"><div class="wrap7">
+    <a class="logo7" href="<%= ctx %>/">Nhà hàng <b>ABC</b></a>
+    <nav class="nav7">
+    <% if (me7 == null) { %>
+        <a href="<%= ctx %>/view7/customer7/CustomerHomeFrm7.jsp">Trang chủ</a>
+        <a href="<%= ctx %>/view7/customer7/MenuFrm7.jsp">Thực đơn</a>
+        <a href="<%= ctx %>/view7/customer7/ReservationLookupFrm7.jsp">Tra cứu đặt bàn</a>
+        <a class="cta7" href="<%= ctx %>/view7/customer7/SearchTableFrm7.jsp">Đặt bàn</a>
+        <a href="<%= ctx %>/view7/member7/LoginFrm7.jsp">Nhân viên</a>
+    <% } else { %>
+        <a href="<%= ctx + home7(me7) %>">Trang chủ nhân viên</a>
+        <span class="who7"><%= h7(me7.getFullName()) %> (<%= h7(me7.getPosition()) %>)</span>
+        <a href="<%= ctx %>/view7/member7/doLogout7.jsp">Đăng xuất</a>
+    <% } %>
+    </nav>
+</div></header>
+<main class="wrap7">

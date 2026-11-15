@@ -1,0 +1,48 @@
+<%@ page pageEncoding="UTF-8" import="java.io.File,java.text.SimpleDateFormat,java.text.DecimalFormat,model7.*"%>
+<%!
+    /** Mã hóa ký tự HTML khi in dữ liệu ra trang. */
+    static String h7(Object o) {
+        return o == null ? "" : o.toString().replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+                .replace("\"", "&quot;").replace("'", "&#39;");
+    }
+
+    /** Tham số đã cắt khoảng trắng (null thành chuỗi rỗng). */
+    static String p7(String v) {
+        return v == null ? "" : v.trim();
+    }
+
+    static String money7(float v) {
+        return new DecimalFormat("#,##0").format(v).replace(',', '.') + " đ";
+    }
+
+    static String date7(java.util.Date d) {
+        return d == null ? "" : new SimpleDateFormat("dd/MM/yyyy").format(d);
+    }
+
+    static String time7(java.util.Date t) {
+        return t == null ? "" : new SimpleDateFormat("HH:mm").format(t);
+    }
+
+    /** Thư mục lưu ảnh món ăn tải lên: <thư mục Tomcat>/restaurant7_images (ngoài thư mục web nên deploy lại không mất). */
+    static File dir7(String webRoot) {
+        File f = new File(new File(webRoot).getAbsoluteFile().getParentFile().getParentFile(), "restaurant7_images");
+        f.mkdirs();
+        return f;
+    }
+
+    /** Đường dẫn ảnh của món ăn (ảnh mặc định nếu món chưa có ảnh). */
+    static String img7(String ctx, Dish7 d) {
+        return d.getImage() == null ? ctx + "/images/no-image7.svg" : ctx + "/view7/image7.jsp?name=" + d.getImage();
+    }
+
+    static String status7(String s) {
+        return "pending".equals(s) ? "Chờ xác nhận" : "confirmed".equals(s) ? "Đã xác nhận"
+                : "cancelled".equals(s) ? "Đã hủy" : "active".equals(s) ? "Đang bán" : s;
+    }
+
+    /** Trang chủ của nhân viên theo vai trò. */
+    static String home7(Staff7 s) {
+        return s instanceof Manager7 ? "/view7/manager7/ManagerHomeFrm7.jsp"
+                : s instanceof SaleStaff7 ? "/view7/sale7/SaleHomeFrm7.jsp" : "/view7/warehouse7/WarehouseHomeFrm7.jsp";
+    }
+%>

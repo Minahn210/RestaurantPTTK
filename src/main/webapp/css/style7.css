@@ -1,0 +1,97 @@
+/* Restaurant7 - giao diện chung (B23DCVT167) */
+:root{--ink:#2b2118;--muted:#7a6a5c;--bg:#faf6f0;--card:#fff;--line:#eadfd2;--acc:#b5452b;--acc2:#8f321d;--gold:#c8963e;--ok:#2f7d4f;--bad:#b3261e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 "Segoe UI",Roboto,Arial,sans-serif;min-height:100vh;display:flex;flex-direction:column}
+a{color:var(--acc)}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;margin:0 0 .5em;line-height:1.25}
+.wrap7{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+main.wrap7{flex:1;padding-top:28px;padding-bottom:40px}
+/* thanh trên cùng */
+.top7{background:var(--ink);color:#f3e9dc;position:sticky;top:0;z-index:5}
+.top7 .wrap7{display:flex;align-items:center;gap:18px;min-height:62px;flex-wrap:wrap}
+.logo7{color:#fff;text-decoration:none;font:600 22px Georgia,serif;letter-spacing:.3px}
+.logo7 b{color:var(--gold)}
+.nav7{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap;align-items:center}
+.nav7 a{color:#f3e9dc;text-decoration:none;padding:8px 12px;border-radius:6px}
+.nav7 a:hover,.nav7 a.on{background:#ffffff1a;color:#fff}
+.nav7 .who7{color:var(--gold);padding:0 8px}
+.nav7 a.cta7{background:var(--acc);color:#fff}
+/* banner trang chủ */
+.hero7{background:linear-gradient(120deg,#2b2118ee,#5a2c1ccc),repeating-linear-gradient(45deg,#3a2a1d 0 14px,#33251a 14px 28px);color:#fff;border-radius:16px;padding:56px 48px;margin-bottom:28px}
+.hero7 h1{font-size:40px;max-width:640px}
+.hero7 p{max-width:560px;color:#f0e2d0;font-size:17px}
+.hero7 .btns7{justify-content:flex-start}
+/* thẻ, lưới */
+.card7{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:0 2px 10px #2b21180d}
+.grid7{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.tile7{display:block;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;transition:.15s}
+.tile7:hover{border-color:var(--acc);transform:translateY(-2px);box-shadow:0 6px 16px #2b21181a}
+.tile7 .ic7{font-size:30px}
+.tile7 b{display:block;font-size:17px;margin:6px 0 2px}
+.tile7 span{color:var(--muted);font-size:14px}
+.tile7.off{opacity:.5;pointer-events:none}
+.tile7.off span::after{content:" (chưa hỗ trợ)"}
+.head7{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.head7 p{margin:0;color:var(--muted)}
+.info7{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:28px}
+.info7 div{background:#f3ebe0;border-radius:12px;padding:16px 18px}
+/* món ăn */
+.dish7{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.dish7 img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#f1e7da}
+.dish7 div{padding:12px 14px}
+.dish7 b{display:block;font-size:16px}
+.dish7 small{color:var(--muted)}
+.price7{color:var(--acc);font-weight:700}
+.chips7{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.chips7 a{padding:6px 14px;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--ink);background:#fff}
+.chips7 a.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+/* form */
+.frm7{max-width:620px;margin:0 auto}
+.frm7.sm{max-width:420px}
+.row7{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;margin-bottom:14px}
+.row7 label{font-weight:600}
+.req{color:var(--bad)}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid #d6c8b8;border-radius:8px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid #b5452b55;border-color:var(--acc)}
+textarea{min-height:80px;resize:vertical}
+.inline7{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+.inline7 input{width:auto}
+.preview7{max-width:160px;border-radius:8px;margin-top:8px;display:none}
+.sum7{background:#f3ebe0;border-radius:10px;padding:12px 16px;margin-bottom:18px}
+.sum7 p{margin:2px 0}
+/* nút */
+.btns7{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;margin-top:18px}
+.btn7{display:inline-block;padding:10px 20px;border-radius:8px;border:1px solid var(--acc);background:var(--acc);color:#fff;font:600 15px inherit;font-family:inherit;text-decoration:none;cursor:pointer}
+.btn7:hover{background:var(--acc2)}
+.btn7.ghost{background:transparent;color:var(--acc)}
+.btn7.light{background:#fff;color:var(--ink);border-color:#fff}
+.btn7.off{background:#e6ddd2;border-color:#e6ddd2;color:#9a8b7c;pointer-events:none}
+/* bảng */
+.tblbox7{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:12px}
+.tbl7{width:100%;border-collapse:collapse}
+.tbl7 th,.tbl7 td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+.tbl7 th{background:#f3ebe0;font-size:14px;white-space:nowrap}
+.tbl7 tr:last-child td{border-bottom:0}
+.tbl7 td.num{text-align:right;white-space:nowrap}
+.tbl7 img{width:56px;height:42px;object-fit:cover;border-radius:6px;display:block}
+.tbl7 tr.new7 td{background:#fff4d6;animation:flash7 2s}
+@keyframes flash7{from{background:#ffd98a}}
+.tag7{display:inline-block;padding:2px 10px;border-radius:12px;font-size:13px;background:#e9e1d6}
+.tag7.pending{background:#fff1cc;color:#7a5600}.tag7.confirmed,.tag7.active{background:#dcefe3;color:var(--ok)}.tag7.cancelled{background:#f6d9d6;color:var(--bad)}
+.link7{font-weight:600}
+/* thông báo */
+.msg7{padding:12px 16px;border-radius:10px;margin-bottom:16px}
+.msg7.err{background:#fbe4e1;color:var(--bad)}
+.msg7.ok{background:#dcefe3;color:var(--ok)}
+.empty7{text-align:center;color:var(--muted);padding:30px}
+.mask7{position:fixed;inset:0;background:#2b211899;display:flex;align-items:center;justify-content:center;z-index:9;padding:20px}
+.pop7{background:#fff;border-radius:16px;padding:28px 30px;max-width:460px;width:100%;box-shadow:0 20px 50px #0005;text-align:center}
+.pop7 .big7{font-size:44px;line-height:1}
+.pop7 .ok{color:var(--ok);font-weight:700;font-size:18px}
+.pop7 .bad{color:var(--bad);font-weight:700;font-size:17px}
+.pop7 .btns7{justify-content:center}
+.code7{font:700 28px Georgia,serif;color:var(--acc);letter-spacing:2px}
+/* chân trang */
+.foot7{background:var(--ink);color:#cbbba8;font-size:14px;padding:18px 0}
+.foot7 .wrap7{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:640px){.row7{grid-template-columns:1fr;gap:4px}.hero7{padding:36px 24px}.hero7 h1{font-size:30px}}
