@@ -18,7 +18,7 @@
         <a href="<%= ctx %>/view7/customer7/MenuFrm7.jsp">Thực đơn</a>
         <a href="<%= ctx %>/view7/customer7/ReservationLookupFrm7.jsp">Tra cứu đặt bàn</a>
         <a class="cta7" href="<%= ctx %>/view7/customer7/SearchTableFrm7.jsp">Đặt bàn</a>
-        <a href="<%= ctx %>/view7/member7/LoginFrm7.jsp">Nhân viên</a>
+        <a href="<%= ctx %>/view7/member7/LoginFrm7.jsp">Đăng nhập</a>
     <% } else { %>
         <a href="<%= ctx + home7(me7) %>">Trang chủ nhân viên</a>
         <span class="who7"><%= h7(me7.getFullName()) %> (<%= h7(me7.getPosition()) %>)</span>
