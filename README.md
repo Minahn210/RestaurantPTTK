@@ -47,7 +47,7 @@ Mặc định code kết nối `localhost:3306`, user **root**, mật khẩu **1
 Nếu MySQL của bạn dùng mật khẩu khác, sửa hằng `DEFAULT_PASSWORD` trong `src/main/java/dao7/DAO7.java`
 (hoặc thêm tham số JVM cho Tomcat: `-Ddb7.password=matkhau`).
 
-## 3. Chạy bằng Eclipse (Dynamic Web Project – giống tài liệu của cô)
+## 3. Chạy bằng Eclipse 
 
 1. File → New → Dynamic Web Project, tên `restaurant7`, Target runtime: Apache Tomcat v8.5.
 2. Chép nội dung `src/main/java` vào thư mục `src` (Java Resources) của project.
