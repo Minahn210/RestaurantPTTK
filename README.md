@@ -79,5 +79,5 @@ Không dùng extension: chép `target/restaurant7.war` vào thư mục `webapps`
 - Phiếu đặt online có trạng thái `pending` (chờ NV bán hàng xác nhận), `tblStaff7id` để trống.
 - Khách đặt bàn được tìm theo số điện thoại. Nếu chưa có thì thêm khách hàng mới.
 - Tên món ăn bị trùng nếu giống hệt sau khi bỏ khoảng trắng đầu cuối, không phân biệt hoa thường nhưng **có** phân biệt dấu: "Bún chả" ≠ "Bun cha".
-- Ảnh món ăn: .jpg/.jpeg/.png/.gif/.webp, tối đa 5 MB, lưu vào `images/dish7/`.
-- Các mục trong menu ngoài 2 module (Tạo combo, Thống kê, Sửa/Xóa món, Tìm kiếm món, Đặt món) chỉ hiển thị mờ, chưa làm.
+- Ảnh món ăn: .jpg/.jpeg/.png/.gif/.webp, tối đa 5 MB, lưu vào thư mục `restaurant7_images` trong thư mục cài Tomcat.
+- Các mục trong menu ngoài 2 module (Tạo combo, Thống kê, Sửa/Xóa món, Đặt món) chỉ hiển thị mờ, chưa làm.
