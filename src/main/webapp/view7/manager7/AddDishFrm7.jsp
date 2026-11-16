@@ -28,9 +28,9 @@
         <div class="row7"><label for="inImage">Ảnh món ăn</label>
             <div><input type="file" id="inImage" name="inImage" accept=".jpg,.jpeg,.png,.gif,.webp">
             <img id="preview7" class="preview7" alt=""></div></div>
-        <div class="btns7">
-            <a class="btn7 ghost" href="ManageDishFrm7.jsp">Quay lại</a>
+        <div class="btns7 left7">
             <button type="submit" class="btn7" name="subAdd">Thêm</button>
+            <a class="btn7 ghost" href="ManageDishFrm7.jsp">Quay lại</a>
         </div>
     </form>
 </div>

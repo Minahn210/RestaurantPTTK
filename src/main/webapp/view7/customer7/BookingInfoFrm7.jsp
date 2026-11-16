@@ -34,9 +34,9 @@
             <input type="number" id="inNumberOfGuests" name="inNumberOfGuests" required min="1" max="<%= table.getCapacity() %>"></div>
         <div class="row7"><label for="inNote">Ghi chú</label>
             <textarea id="inNote" name="inNote" maxlength="255"></textarea></div>
-        <div class="btns7">
-            <a class="btn7 ghost" href="AvailableTableFrm7.jsp">Quay lại</a>
+        <div class="btns7 left7">
             <button type="submit" class="btn7" name="subConfirm">Xác nhận</button>
+            <a class="btn7 ghost" href="AvailableTableFrm7.jsp">Quay lại</a>
         </div>
     </form>
 </div>

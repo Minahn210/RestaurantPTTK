@@ -95,3 +95,4 @@ textarea{min-height:80px;resize:vertical}
 .foot7{background:var(--ink);color:#cbbba8;font-size:14px;padding:18px 0}
 .foot7 .wrap7{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media(max-width:640px){.row7{grid-template-columns:1fr;gap:4px}.hero7{padding:36px 24px}.hero7 h1{font-size:30px}}
+.btns7.left7{justify-content:flex-start}

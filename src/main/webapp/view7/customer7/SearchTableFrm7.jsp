@@ -14,9 +14,9 @@
                    value="<%= bookingDate == null ? "" : new SimpleDateFormat("yyyy-MM-dd").format(bookingDate) %>"></div>
         <div class="row7"><label for="inTime">Giờ đến <span class="req">*</span></label>
             <input type="time" id="inTime" name="inTime" required min="08:00" max="21:00" value="<%= time7(arrivalTime) %>"></div>
-        <div class="btns7">
-            <a class="btn7 ghost" href="CustomerHomeFrm7.jsp">Quay lại</a>
+        <div class="btns7 left7">
             <button type="submit" class="btn7" name="subSearch">Tìm bàn</button>
+            <a class="btn7 ghost" href="CustomerHomeFrm7.jsp">Quay lại</a>
         </div>
     </form>
 </div>

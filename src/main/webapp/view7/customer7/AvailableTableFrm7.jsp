@@ -45,8 +45,7 @@
 %><%@ include file="/view7/top7.jspf" %>
 <div class="head7">
     <div><h1>Danh sách bàn trống</h1>
-    <% if (error == null) { %><p>Ngày đến: <b><%= date7(bookingDate) %></b> &nbsp;·&nbsp; Giờ đến: <b><%= time7(arrivalTime) %></b> &nbsp;·&nbsp; còn <b><%= listTable.length %></b> bàn trống</p><% } %></div>
-    <a class="btn7 ghost" href="SearchTableFrm7.jsp">Quay lại</a>
+    <% if (error == null) { %><p>Ngày đến: <b><%= date7(bookingDate) %></b> &nbsp;·&nbsp; Giờ đến: <b><%= time7(arrivalTime) %></b></p><% } %></div>
 </div>
 <% if (error != null) { %>
     <div class="msg7 err"><%= h7(error) %></div>
@@ -62,4 +61,5 @@
     <% } %>
 </table></div>
 <% } %>
+<div class="btns7 left7"><a class="btn7 ghost" href="SearchTableFrm7.jsp">Quay lại</a></div>
 <%@ include file="/view7/bottom7.jspf" %>
